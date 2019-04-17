@@ -1,23 +1,16 @@
-'use strict';
 
-var novicell = novicell || {};
+import priorityNav from 'priority-nav';
 
-novicell.navigation =
-    novicell.navigation ||
-    new function() {
-        this.init = function() {
-            if (window.innerWidth > 767) {
-                this.initPriorityNav();
-            }
-        };
-        this.initPriorityNav = function() {
-            var wrapper = document.querySelector('.nav');
-            var nav = priorityNav.init({
-                mainNavWrapper: '.nav-main',
-                mainNav: '.nav-main-list',
-                breakPoint: 0,
-                throttleDelay: 0,
-                navDropdownLabel: 'More'
-            });
-        };
-    }();
+if (window.innerWidth > 767) {
+  initPriorityNav();
+}
+
+function initPriorityNav() {
+  priorityNav.init({
+    mainNavWrapper: '.nav-main',
+    mainNav: '.nav-main-list',
+    breakPoint: 0,
+    throttleDelay: 0,
+    navDropdownLabel: 'More',
+  });
+}

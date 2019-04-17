@@ -1,23 +1,20 @@
-"use strict";
 
+import Parallax from 'parallax-js';
 /**
  * @name Novicell pageheader-dots
- * @desc Paralax.js, parallax.js reacts to the orientation of your smart device, or position of cursor
+ * @desc Paralax.js, parallax.js reacts to the orientation of your smart device
  *       http://matthew.wagerfield.com/parallax/
  * @author Mark Hansen MGH
  * @requires https://github.com/wagerfield/parallax
  */
 
-var novicell = novicell || {};
+function prlx() {
+  const scene = document.getElementById('pageheader-scene');
+  if (!scene) {
+    return;
+  }
+  /* eslint-disable no-new */
+  new Parallax(scene);
+}
 
-novicell.pageheaderDots =
-    novicell.pageheaderDots ||
-    new function() {
-        this.init = function() {
-            var scene = document.getElementById("pageheader-scene");
-            if (!scene) {
-                return;
-            }
-            var parallaxInstance = new Parallax(scene);
-        };
-    }();
+prlx();

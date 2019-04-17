@@ -23,7 +23,7 @@
     }
 
     &:before {
-        background-color: color-mod(
+        background-color: color(
             var(--hero-background-color) alpha(var(--hero-content-opacity))
         );
         content: '';

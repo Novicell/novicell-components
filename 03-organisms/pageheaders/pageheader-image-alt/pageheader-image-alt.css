@@ -26,7 +26,7 @@
     }
 
     &:before {
-        background-color: color-mod(
+        background-color: color(
             var(--color-primary) alpha(var(--hero-content-opacity))
         );
         content: '';

@@ -1,5 +1,4 @@
-'use strict';
-import maskInput from 'vanilla-text-mask';
+"use strict";
 
 /**
  * @name Novicell Input Mask
@@ -9,47 +8,112 @@ import maskInput from 'vanilla-text-mask';
  * @requires https://github.com/text-mask/text-mask/tree/master/vanilla
  */
 
-const masks = [
-    {
-        selector: '.js-mask--phone',
-        mask: [ /\d/, /\d/, ' ', /\d/, /\d/, ' ', /\d/, /\d/, ' ', /\d/, /\d/ ],
-        pattern: ''
-    },
-    {
-        selector: '.js-mask--cpr',
-        mask: [ /\d/, /\d/, ' ', /\d/, /\d/, ' ', /\d/, /\d/, ' ', '-', ' ', /\d/, /\d/, /\d/, /\d/ ],
-        pattern: ''
-    },
-    {
-        selector: '.js-mask--bank',
-        mask: [ /\d/, /\d/, /\d/, /\d/, ' ', '-', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/ ],
-        pattern: ''
-    },
-    {
-        selector: '.js-mask--date1',
-        mask: [ /[0-3]/, /\d/, '/', /[0-1]/, /\d/, '/', /\d/, /\d/, /\d/, /\d/ ],
-        pattern: ''
-    }
-];
+var novicell = novicell || {};
 
-for (let i = 0; i < masks.length; i++) {
-    const input = document.querySelector(masks[ i ].selector);
-    const mask = masks[ i ].mask;
-    const pattern = masks[ i ].pattern;
+novicell.inputMasking =
+    novicell.inputMasking ||
+    new function() {
+        this.init = function() {
+            const masks = [
+                {
+                    selector: ".js-mask--phone",
+                    mask: [
+                        /\d/,
+                        /\d/,
+                        " ",
+                        /\d/,
+                        /\d/,
+                        " ",
+                        /\d/,
+                        /\d/,
+                        " ",
+                        /\d/,
+                        /\d/
+                    ],
+                    pattern: ""
+                },
+                {
+                    selector: ".js-mask--cpr",
+                    mask: [
+                        /\d/,
+                        /\d/,
+                        " ",
+                        /\d/,
+                        /\d/,
+                        " ",
+                        /\d/,
+                        /\d/,
+                        " ",
+                        "-",
+                        " ",
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/
+                    ],
+                    pattern: ""
+                },
+                {
+                    selector: ".js-mask--bank",
+                    mask: [
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        " ",
+                        "-",
+                        " ",
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/
+                    ],
+                    pattern: ""
+                },
+                {
+                    selector: ".js-mask--date1",
+                    mask: [
+                        /[0-3]/,
+                        /\d/,
+                        "/",
+                        /[0-1]/,
+                        /\d/,
+                        "/",
+                        /\d/,
+                        /\d/,
+                        /\d/,
+                        /\d/
+                    ],
+                    pattern: ""
+                }
+            ];
 
-    if (input && mask) {
-        // Patterns is work in progress
-        if (pattern) {
-            input.setAttribute('pattern', pattern);
-        }
+            for (let i = 0; i < masks.length; i++) {
+                let input = document.querySelector(masks[i].selector);
+                let mask = masks[i].mask;
+                let pattern = masks[i].pattern;
 
-        masks[ i ].masking = maskInput({
-            inputElement: input,
-            mask,
-            guide: false
-        });
-    }
-}
+                if (input && mask) {
+                    //Patterns is work in progress
+                    if (pattern) {
+                        input.setAttribute("pattern", pattern);
+                    }
 
-// Calling `vanillaTextMask.maskInput` adds event listeners to the input element.
-// If you need to remove those event listeners, you can call: maskedInputController.destroy()
+                    masks[i].masking = vanillaTextMask.maskInput({
+                        inputElement: input,
+                        mask: mask,
+                        guide: false
+                    });
+                }
+            }
+
+            // Calling `vanillaTextMask.maskInput` adds event listeners to the input element.
+            // If you need to remove those event listeners, you can call: maskedInputController.destroy()
+        };
+    }();

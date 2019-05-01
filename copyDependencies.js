@@ -6,7 +6,7 @@ let keys = Object.keys(componentDependencies.dependencies);
 let child;
 console.log(keys)
 keys.forEach((key)=>{
-    child = exec(`npm install ${key}`).stderr.pipe(process.stderr);
+    child = exec(`npm install ${key}`);
 });
 // frontendPackageJson.dependencies = componentDependencies.dependencies;
 // fs.writeFileSync("../package.json", JSON.stringify(frontendPackageJson), (err)=>{

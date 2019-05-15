@@ -11,6 +11,6 @@
         "bouncer": "github:cferdinandi/bouncer#v1.4.3",
         "vanilla-text-mask": "5.1.1",
         "aos": "2.3.4",
-        "lodash.debounce": "4.0.8",
+        "lodash.debounce": "4.0.8"
     }
 }

@@ -1,4 +1,3 @@
-
 import Flickity from 'flickity';
 
 /**

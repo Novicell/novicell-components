@@ -1,4 +1,3 @@
-
 import Parallax from 'parallax-js';
 /**
  * @name Novicell pageheader-dots

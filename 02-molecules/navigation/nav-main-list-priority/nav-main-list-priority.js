@@ -1,4 +1,3 @@
-
 import priorityNav from 'priority-nav';
 
 if (window.innerWidth > 767) {

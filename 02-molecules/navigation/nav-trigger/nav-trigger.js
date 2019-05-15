@@ -1,4 +1,3 @@
-
 const navButton = document.querySelector('#js-mobile-navigation-button');
 const body = document.querySelector('#site');
 const hamburgerLabel = document.querySelector('.js-hamburger-label');

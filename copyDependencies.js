@@ -1,14 +1,8 @@
 let exec = require('child_process').exec;
-const fs = require("fs");
 let componentDependencies = require("./component_dependencies.json");
-let frontendPackageJson = require("../package.json");
 let keys = Object.keys(componentDependencies.dependencies);
-let child;
 console.log(keys)
+// Run npm install for each key (key is dependency name, I.E "novicell-sprite-scroller")
 keys.forEach((key)=>{
     child = exec(`npm install ${key}`);
 });
-// frontendPackageJson.dependencies = componentDependencies.dependencies;
-// fs.writeFileSync("../package.json", JSON.stringify(frontendPackageJson), (err)=>{
-//     console.log(err)
-// })

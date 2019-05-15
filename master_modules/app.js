@@ -1,5 +1,5 @@
 // This is the global JS file that will be accessible from any component
-import 'novicell-lazyload';
+// import 'novicell-lazyload';
 
 import '../02-molecules/animate-on-scroll-wrapper/animate-on-scroll-wrapper';
 // import '../02-molecules/navigation/nav-trigger/nav-trigger';

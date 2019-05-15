@@ -5,5 +5,5 @@ console.log(keys)
 // Run npm install for each key (key is dependency name, I.E "novicell-sprite-scroller")
 keys.forEach((key)=>{
     console.log(`Now installing ${key}`);
-    child = execSync(`npm install ${key}`).stderr.pipe(process.stderr);
+    child = execSync(`npm install ${key}`);
 });

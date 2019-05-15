@@ -1,4 +1,3 @@
-
 if (document.querySelector('#js-topbar-related')) {
   window.addEventListener(
     'scroll',

@@ -10,7 +10,7 @@ import '../03-organisms/topbar/topbar-related/topbar-related';
 import '../03-organisms/pageheaders/pageheader-video/pageheader-video--youtube';
 
 // Note - the following is uncommented as it cause build issues with Netlify (Reason unknown)
-// import NovicellLazyLoad from 'novicell-lazyload';
+// import NovicellLazyLoad from 'novicell-lazyload'; Look at npm docs for adding listeners without
 // import debounce from 'lodash/debounce';
 
 // document.addEventListener('lazybeforeunveil', NovicellLazyLoad.lazyLoad, true);

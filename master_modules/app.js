@@ -9,8 +9,8 @@ import '../03-organisms/pageheaders/pageheader-dots/pageheader-dots';
 import '../03-organisms/topbar/topbar-related/topbar-related';
 import '../03-organisms/pageheaders/pageheader-video/pageheader-video--youtube';
 
-import NovicellLazyLoad from 'novicell-lazyload';
-import debounce from 'lodash/debounce';
+// import NovicellLazyLoad from 'novicell-lazyload';
+// import debounce from 'lodash/debounce';
 
-document.addEventListener('lazybeforeunveil', NovicellLazyLoad.lazyLoad, true);
-window.addEventListener('resize', debounce(NovicellLazyLoad.checkImages), 100, false);
+// document.addEventListener('lazybeforeunveil', NovicellLazyLoad.lazyLoad, true);
+// window.addEventListener('resize', debounce(NovicellLazyLoad.checkImages), 100, false);

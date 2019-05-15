@@ -1,4 +1,4 @@
-let exec = require('child_process').exec;
+let execSync = require('child_process').execSync;
 let componentDependencies = require("./component_dependencies.json");
 let keys = Object.keys(componentDependencies.dependencies);
 console.log(keys)

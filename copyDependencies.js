@@ -4,5 +4,5 @@ let keys = Object.keys(componentDependencies.dependencies);
 console.log(keys)
 // Run npm install for each key (key is dependency name, I.E "novicell-sprite-scroller")
 keys.forEach((key)=>{
-    child = exec(`npm install ${key}`);
+    child = exec(`npm install ${key}`).stderr.pipe(process.stderr);
 });

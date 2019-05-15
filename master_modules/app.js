@@ -9,6 +9,7 @@ import '../03-organisms/pageheaders/pageheader-dots/pageheader-dots';
 import '../03-organisms/topbar/topbar-related/topbar-related';
 import '../03-organisms/pageheaders/pageheader-video/pageheader-video--youtube';
 
+// Note - the following is uncommented as it cause build issues with Netlify (Reason unknown)
 // import NovicellLazyLoad from 'novicell-lazyload';
 // import debounce from 'lodash/debounce';
 

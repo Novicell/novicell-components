@@ -70,7 +70,7 @@
 @import '../04-pages/overlapping-sections/overlapping-sections.css';
 
 /* NPM modules css */
-@import '../../node_modules/aos/dist/aos.css'
+@import '../../node_modules/aos/dist/aos.css';
 
 .selector,
 .selector-secondary,

@@ -4,7 +4,7 @@ set -e
 # Function for cloning the repo and copying it into the src
 clone_components()
 {
-    mkdir tmp_src
+    mkdir /tmp_src
 
     mv ./*/ /tmp_src/
 

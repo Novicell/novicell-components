@@ -11,6 +11,8 @@ clone_components()
     echo "The frontend was cloned into a temporary folder called tmp_frontned"
     echo "Copying the contents of /tmp_frontend/ to ./"
     cp -a -rf ./tmp_frontend/* ./
+    echo "NPM installing"
+    npm install
     echo "Copying asset folders from tmp_src to ./assets/"
     cp -a -rf ./tmp_src/assets/* ./assets/
     # Remove the temp assets so they're not copied alongside the other contents of the components dir

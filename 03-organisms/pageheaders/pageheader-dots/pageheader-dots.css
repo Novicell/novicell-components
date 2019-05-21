@@ -9,8 +9,8 @@
 }
 
 .pageheader-color-box {
-    background-color: color(
-        var(--color-plum) alpha(var(--hero-content-opacity))
+    background-color: color-mod(
+        var(--color-blackberry) alpha(var(--hero-content-opacity))
     );
     width: 100%;
     height: 100vh;

@@ -10,7 +10,7 @@ clone_components()
 
     git clone https://github.com/Henrikschytze/Continuous_integration_frontend.git tmp_frontend
 
-    cp -a -rf tmp_frontend/* ../
+    cp -a -rf ./tmp_frontend/* ./
 
     echo "Copying asset folders from tmp_src to ./assets/"
     cp -a -rf ./tmp_src/assets/* ./assets/

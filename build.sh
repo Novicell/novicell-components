@@ -7,7 +7,7 @@ clone_components()
     echo "Moving all the relevant folders into a folder called tmp_src"
     mv -v ./_base/ ./_partials/ ./00-examples/ ./01-atoms/ ./02-molecules/ ./03-organisms/ ./04-pages/ ./assets/ ./master_modules ./tmp_src/ 
     # Cloning into a tmp folder as it is not allowed to clone into current folder if it is not empty
-    git clone https://github.com/Henrikschytze/Continuous_integration_frontend.git tmp_frontend
+    git clone https://github.com/Novicell/novicell-frontend.git tmp_frontend
     echo "The frontend was cloned into a temporary folder called tmp_frontned"
     echo "Copying the contents of /tmp_frontend/ to ./"
     cp -a -rf ./tmp_frontend/* ./

@@ -8,6 +8,6 @@
 
 [build]
   # The chmod allows for the shell script to run
-  base    = "../root/"
-  publish = "../build/"
+  base    = ""
+  publish = "build/"
   command = "chmod +x ./build.sh && ./build.sh"

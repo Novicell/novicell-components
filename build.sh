@@ -4,7 +4,11 @@ set -e
 # Function for cloning the repo and copying it into the src
 clone_components()
 {
-    git clone https://github.com/Henrikschytze/novicell-components.git tmp_src 
+
+    git clone https://github.com/Henrikschytze/Continuous_integration_frontend.git ../root    
+    ls
+    copy_dependencies
+
     echo "Copying asset folders from tmp_src to ./assets/"
     cp -a -rf ./tmp_src/assets/* ./assets/
     # Remove the temp assets so they're not copied alongside the other contents of the components dir
@@ -15,7 +19,6 @@ clone_components()
     echo "Overriding inner contents from master_modules/app.js and master.css to src/Modules"
     cat ./tmp_src/master_modules/app.js > ./src/Modules/app.js
     cat ./tmp_src/master_modules/master.css > ./src/Modules/master.css
-    copy_dependencies
     rm -rf ./master_modules
     rm -rf ./tmp_src
     echo "Components copied to ./src"

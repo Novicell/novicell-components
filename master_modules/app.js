@@ -4,6 +4,7 @@
 import '../02-molecules/animate-on-scroll-wrapper/animate-on-scroll-wrapper';
 import '../02-molecules/navigation/nav-trigger/nav-trigger';
 import '../02-molecules/navigation/nav-main-list-priority/nav-main-list-priority';
+import '../02-molecules/box/box-image-duotone/box-image-duotone';
 import '../03-organisms/pageheaders/pageheader-slider/pageheader-slider';
 import '../03-organisms/pageheaders/pageheader-dots/pageheader-dots';
 import '../03-organisms/topbar/topbar-related/topbar-related';

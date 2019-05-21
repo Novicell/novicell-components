@@ -13,7 +13,7 @@ clone_components()
     cp -a -rf ./tmp_frontend/* ./
 
     echo "Copying asset folders from tmp_src to ./assets/"
-    cp -a -rf ./tmp_src/assets/* ./assets/
+    cp -a -rf -v ./tmp_src/assets/* ./assets/
     # Remove the temp assets so they're not copied alongside the other contents of the components dir
     rm -rf ./tmp_src/assets/
     # Copy all the remaining contents of tmp_src to ./src/

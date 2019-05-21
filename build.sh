@@ -4,7 +4,8 @@ set -e
 # Function for cloning the repo and copying it into the src
 clone_components()
 {
-    mv ./*/!(/tmp_src/) ./tmp_src/
+    shopt -s extglob
+    mv ./*/!(tmp_src) ./tmp_src/
 
     git clone https://github.com/Henrikschytze/Continuous_integration_frontend.git .
     echo "Copying asset folders from tmp_src to ./assets/"

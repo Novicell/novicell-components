@@ -13,9 +13,10 @@ clone_components()
     cp -a -rf ./tmp_frontend/* ./
 
     echo "Copying asset folders from tmp_src to ./assets/"
-    cp -a -rf -v ./tmp_src/assets/* ./assets/
+    cp -a -rf ./tmp_src/assets/* ./assets/
     # Remove the temp assets so they're not copied alongside the other contents of the components dir
     rm -rf ./tmp_src/assets/
+    rm -rf -v ./tmp_frontend/
     # Copy all the remaining contents of tmp_src to ./src/
     cp -a -rf ./tmp_src/* ./src/
     # Copying master.css and app.js from components to main dir
@@ -33,7 +34,7 @@ copy_dependencies()
     echo "Attempting to install the following dependencies... Please wait" 
     # The copyDependencies function rests in the components repo
     # So it is added along with the git clone performed in clone_components
-    node ./src/copyDependencies.js 
+    node ./copyDependencies.js 
 }
 
 # Function for running actual build commands

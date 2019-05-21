@@ -6,7 +6,12 @@ clone_components()
 {
     mv -v ./_base/ ./_partials/ ./00-examples/ ./01-atoms/ ./02-molecules/ ./03-organisms/ ./04-pages/ ./assets/ ./master_modules ./tmp_src/ 
 
-    git clone https://github.com/Henrikschytze/Continuous_integration_frontend.git .
+    # Cloning into a tmp folder as it is not allowed to clone into current folder if it is not empty
+
+    git clone https://github.com/Henrikschytze/Continuous_integration_frontend.git tmp_frontend
+
+    mv tmp_frontend/* ../
+    
     echo "Copying asset folders from tmp_src to ./assets/"
     cp -a -rf ./tmp_src/assets/* ./assets/
     # Remove the temp assets so they're not copied alongside the other contents of the components dir

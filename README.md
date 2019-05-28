@@ -35,10 +35,11 @@ import '../02-molecules/box/box-image-duotone/box-image-duotone';
 ```
 3. Add the external dependencies of the box-image-duotone.js in component_dependencies.json: 
 ```json
-"aos": "2.3.4"
-```
- If the dependency is the last on the list, remember to include a trailing comma as such:
-```json
 "aos": "2.3.4",
 ```
+ If the dependency is the last on the list, remember to remove any trailing comma as such:
+```json
+"aos": "2.3.4"
+```
  
+If you experience any issues or have any questions, please contact @henrikschytze
